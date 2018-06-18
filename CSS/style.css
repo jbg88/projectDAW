@@ -1,0 +1,150 @@
+/*primero en el movil (mobile first)*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: blue;
+    flex-grow: 1;
+}
+
+.headerTitle {
+    background-color: blue;
+    padding: 0.5em;
+    color: white;
+}
+
+nav {
+    font-family: Verdana, Geneva, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    padding: 0.5em 1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: blueviolet;
+    flex-wrap: wrap;
+}
+
+nav li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: .5em 1em;
+}
+
+nav li a:hover {
+    background: deepskyblue;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: deepskyblue;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-grow: 1;
+    padding: 0.5em;
+}
+
+.welcomeTitle {
+    text-decoration: underline;
+    padding: 0.5em;
+}
+
+.welcomeMessage {
+    width: 80%;
+    background-color: blue;
+    color: white;
+    padding: 0.5em;
+}
+
+.imagesTitle {
+    padding: 0.5em;
+    text-decoration: underline;
+}
+
+.slide {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    padding: 0.5em;
+}
+
+.slide div {
+    width: 100%;
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.butsli {
+    padding: 0 0 2em 0;
+}
+
+button {
+    border: none;
+    background: white;
+}
+
+button img {
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    width: 100vw;
+    background-color: blue;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+/*formato para escritorio*/
+@media screen and (min-width: 720px) {
+    nav ul {
+        display: flex;
+    }
+}
+
+
+
+
+
