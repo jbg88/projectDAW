@@ -1,0 +1,99 @@
+/*primero en el movil (mobile first)*/
+#ds1Page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: deepskyblue;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+#ds1Title {
+    text-decoration: underline;
+    padding: 0.5em;
+    text-transform: capitalize;
+}
+
+.ds1ImgDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+#ds1Advices {
+    background-color: blue;
+    color: white;
+    padding: 0.5em;
+}
+
+#ds1Advices p {
+    padding: 0.5em;
+}
+
+#ds1Advices h3 {
+    text-decoration: underline;
+    padding: 0.5em;
+}
+
+#ds1References {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#ds1References h3 {
+    text-decoration: underline;
+    padding: 0.5em;
+}
+
+#ds1References a {
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+}
+
+#ds1References a:hover{
+    color: black;
+}
+
+#ds1Comments {
+    border: blueviolet 2px solid;
+    padding: 1em;
+    width: 100%;
+}
+
+#ds1Comments p {
+
+    padding: 0.5em;
+}
+
+#commentsTitle {
+    text-decoration: underline;
+    padding: 0.5em;
+    text-transform: capitalize;
+}
+
+/*formato para escritorio*/
+@media screen and (min-width: 720px) {
+    #ds1Page {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #ds1References {
+        max-width: 20%;
+    }
+}
