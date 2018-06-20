@@ -12,16 +12,16 @@
     <h3 class="imagesTitle">Here you can see images about our games!</h3>
     <div class="slide">
         <div style="display:inline-block;">
-            <img src="images/ds1.jpg"/>
+            <img src="images/ds1.jpg" alt="dark souls 1"/>
         </div>
         <div>
-            <img src="images/ds2.jpg"/>
+            <img src="images/ds2.jpg" alt="dark souls 2"/>
         </div>
         <div>
-            <img src="images/ds3.jpg"/>
+            <img src="images/ds3.jpg" alt="dark souls 3"/>
         </div>
         <div>
-            <img src="images/ds1r.jpg"/>
+            <img src="images/ds1r.jpg" alt="dark souls 1 remastered"/>
         </div>
     </div>
     <div class="butsli">
