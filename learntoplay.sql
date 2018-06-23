@@ -7,6 +7,8 @@
 -- Versión del servidor: 10.1.22-MariaDB
 -- Versión de PHP: 7.1.4
 
+CREATE SCHEMA IF NOT EXISTS learntoplay;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -67,9 +69,9 @@ CREATE TABLE `requests` (
 CREATE TABLE `users` (
   `nick` varchar(18) NOT NULL,
   `age` int(11) NOT NULL,
-  `password` varchar(18) NOT NULL,
+  `password` varchar(64) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `rol` varchar(10) NOT NULL
+  `rol` varchar(10) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -77,8 +79,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`nick`, `age`, `password`, `email`, `rol`) VALUES
-('Blurior', 25, 'Projectdaw2', 'blurior@blurior.com', 'user'),
-('Jorge', 23, 'Projectdaw1', 'jorgebelmonte@hotmail.es', 'admin');
+('Blurior', 25, '$2y$10$xW4rw1E8GEm/RcpRKoab7.KezCKRS.W.g/euKmxdidRWId3UWOJCy', 'blurior@blurior.com', 'user'),
+('Jorge', 23, '$2y$10$Q5duqG3sH8KWDkYm8QAkieZGgBN6iZRnqDeFrXRkRxV7TbB2dptcO', 'jorgebelmonte@hotmail.es', 'admin');
 
 --
 -- Índices para tablas volcadas

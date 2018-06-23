@@ -56,6 +56,12 @@
     box-shadow: 1px 1px 10px blueviolet;
 }
 
+.errorReg{
+    padding: 0.5em;
+    background-color: blueviolet;
+    color: white;
+}
+
 /*formato para escritorio*/
 @media screen and (min-width: 720px) {
 

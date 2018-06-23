@@ -1,12 +1,12 @@
 
 //creo una función para solo permitir el submit si todos los datos son correctos
-function validate() {
+function validate3() {
     // creo variable para permitir el submit o no
     var letSubmit = true;
 
 //primero compruebo que el userName sea correcto, de no serlo pongo la variable letSubmit a false
     var userName = document.getElementById("userName").value;
-    var exp_regName  = /^[a-zA-Z]{1}[a-zA-Z\d_]{1,18}$/i; //expresion regular para solo letras y numeros con minimo 1 y maximo 18, minimo una letra al principio
+    var exp_regName  = /^+[a-zA-Z][a-zA-Z\d_]{1,18}$/i; //expresion regular para solo letras y numeros con minimo 1 y maximo 18, minimo una letra al principio
     var verify = exp_regName.test(userName);
 
     if(verify != true){

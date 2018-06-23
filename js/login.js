@@ -6,7 +6,7 @@ function validate2() {
 
 //primero compruebo que el userName sea correcto, de no serlo pongo la variable letSubmit a false
     var nick = document.getElementById("nick").value;
-    var exp_regName  = /^[a-zA-Z]+[a-zA-Z\d_]{1,18}$/i; //expresion regular para solo letras y numeros con minimo 1 y maximo 18, minimo una letra al principio
+    var exp_regName  = /^[a-zA-Z]{1}[a-zA-Z\d_]{1,18}$/i; //expresion regular para solo letras y numeros con minimo 1 y maximo 18, minimo una letra al principio
     var verify = exp_regName.test(nick);
 
     if(verify != true){

@@ -1,0 +1,45 @@
+POST http://localhost/index.php?p=register
+Content-Type: application/x-www-form-urlencoded;
+
+userName=<script>alert("TE REVENTAO LA PAGINA")</script>&age=50&email=mecagoento@ymucho.mas&pass1=123&pass2=123
+
+<> 2018-06-22T112542.200.html
+
+###
+
+POST http://localhost/index.php?p=register
+Content-Type: application/x-www-form-urlencoded;
+
+userName=LOL&age=50&email=mecagoento&pass1=123&pass2=123
+
+<> 2018-06-22T112311.200.html
+
+###
+
+POST http://localhost/index.php?p=register
+Content-Type: application/x-www-form-urlencoded;
+
+userName=LOL&age=50&email=mecagoento&pass1=123&pass2=123
+
+<> 2018-06-22T112234.200.html
+
+###
+
+POST http://localhost/index.php?p=register
+Content-Type: application/x-www-form-urlencoded;
+
+userName=LOL&age=50&email=mecagoento&pass1=123&pass2=2
+
+<> 2018-06-22T112221.200.html
+
+###
+
+POST http://localhost/index.php?p=register
+Content-Type: application/x-www-form-urlencoded;
+
+userName=LOL&age=50&email=mecagoento&pass1=123&pass=2
+
+<> 2018-06-22T112114.200.html
+
+###
+

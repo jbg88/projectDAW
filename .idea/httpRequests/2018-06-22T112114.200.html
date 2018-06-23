@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Learn To Play</title>
+    <link rel="stylesheet" href="css/header_home_footer.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/games.css">
+    <link rel="stylesheet" href="css/ds1.css">
+</head>
+<body>
+
+<header>
+    <h2 class="headerTitle">Learn To Play</h2>
+    <!-- Menu navegacion -->
+    <p>
+    </p>
+    <nav>
+        <ul>
+            <li><a title="home" href="index.php?p=home">Home</a></li>
+            <li><a title="games" href="index.php?p=games">Games</a></li>
+            <li><a title="contact" href="index.php?p=contact">Contact</a></li>
+            <li><a title="login" href="index.php?p=login">Log In</a></li>
+            <li><a title="register" href="index.php?p=register">Register</a></li>
+        </ul>
+    </nav>
+    <!-- Menu navegacion -->
+</header>
+<br/>
+<b>Notice</b>: Undefined index: pass2 in <b>C:\Users\darkl\Desktop\Jorge Belmonte
+    Galipienso_ProyectoDAW\register.php</b> on line <b>20</b><br/>
+
+<form action="index.php?p=register" method="post" name="formReg" onsubmit='return validate()' id="formReg">
+    <p>La contraseña de confirmación está vacío<br>Password do not match</p>
+    <h1 id="registerTitle">Register Form</h1>
+
+    <div class="divLog">
+        <span class="spanLog"><label for="userName">User name or nick: </label></span>
+        <span class="spanLog"><input type="text" id="userName" name="userName" required maxlength="18"
+                                     minlength="1"/></span>
+    </div>
+
+    <div class="divLog">
+        <span class="spanLog"><label for="age">Age: </label></span>
+        <span class="spanLog"><input type="number" id="age" name="age" required maxlength="3" min="0" max="150"></span>
+    </div>
+
+    <div class="divLog">
+        <span class="spanLog"><label for="pass1">Password: </label></span>
+        <span class="spanLog"><input type="password" id="pass1" name="pass1" required maxlength="18"
+                                     minlength="8"></span>
+    </div>
+
+    <div class="divLog">
+        <span class="spanLog"><label for="pass2">Confirm password: </label></span>
+        <span class="spanLog"><input type="password" id="pass2" name="pass2" required maxlength="18"
+                                     minlength="8"></span>
+    </div>
+
+    <div class="divLog">
+        <span class="spanLog"><label for="email">E-mail: </label></span>
+        <span class="spanLog"><input type="email" id="email" name="email" required placeholder="test@test.com"></span>
+    </div>
+
+    <div class="divLog">
+        <span class="spanLog"><input type="submit" value="Submit" name="submitData" id="submitData"></span>
+    </div>
+
+</form>
+<footer>
+    <p class="footerText">Learn To Play &copy; Jorge Belmonte Galipienso</p>
+</footer>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/slide.js"></script>
+<script src="js/register.js"></script>
+<script src="js/login.js"></script>
+</body>
+
+</html>

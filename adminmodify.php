@@ -1,9 +1,5 @@
 <?php
-//si ya se ha iniciado session redirige al home
-if (!empty($_SESSION['user'])) {
-    header('Location: index.php?p=home');
-    exit;
-}
+
 //si se han enviado datos, los compruebo, creando su correspondiente array de errores
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
@@ -36,27 +32,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $prepared->store_result();//guardo el resultado para que no se quede un fetch abierto si luego abro otro,
         //evito problemas al hacer varias operaciones en la misma conexión
         $prepared->fetch();
-        if ($total > 0) {//si ya existe lanzo un error
-            $errors[] = "User already exists";
-        } else {//si no existe lo inserto
+        if ($total > 0) {//si existe el usuario, lo modifico
             $age = $_POST['age'];
             $pass1 = password_hash($_POST['pass1'], PASSWORD_DEFAULT);
             $email = $_POST['email'];
-            $query = "INSERT INTO users (nick, age, password, email) VALUES (?, ?, ?, ?)";
+            $role = $_POST['adminSel'];
+            $query = "UPDATE users SET  age=?, password=?, email=?, rol=? WHERE nick=?";
             $prepared = $db->prepare($query);
-            $prepared->bind_param('siss', $userName, $age, $pass1, $email);
+            $prepared->bind_param('issss', $age, $pass1, $email, $role, $userName);
             $prepared->execute();
+            $done[] = $userName . " was modified";
+        } else {//si no existe aviso
+            $errors[] = "User not exists";
         }
     }
 }
 ?>
 
-<form action="index.php?p=register" method="post" name="formReg" onsubmit='return validate()' id="formReg">
+<form action="index.php?p=adminmodify" method="post" name="formModiAdmin" onsubmit='return validate()'
+      id="formModiAdmin">
     <!--    si hay errores los muestro-->
     <?= !empty($errors) ? "<p class='errorReg'>" . implode('<br>', $errors) . "</p>" : '' ?>
-    <h1 id="registerTitle">Register Form</h1>
+    <?= !empty($done) ? "<p class='errorReg'>" . implode('<br>', $done) . "</p>" : '' ?>
+    <h1 id="adminModifyTitle">Admin Modify Form</h1>
 
-    <div class="divLog">
+    <div class="divLogA">
         <span class="spanLog"><label for="userName">User name or nick: </label></span>
         <span class="spanLog"><input type="text" id="userName" name="userName" required maxlength="18"
                                      minlength="1"/></span>
@@ -82,6 +82,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="divLog">
         <span class="spanLog"><label for="email">E-mail: </label></span>
         <span class="spanLog"><input type="email" id="email" name="email" required placeholder="test@test.com"></span>
+    </div>
+
+    <div class="divLog">
+        <span class="spanLog"><label for="adminSel">User rol: </label></span>
+        <span class="spanLog">
+            <select id="adminSel" name="adminSel" required>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+        </span>
     </div>
 
     <div class="divLog">

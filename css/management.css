@@ -1,0 +1,16 @@
+#managementPage{
+    background-color: deepskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.managOpt{
+padding: 1em;
+}
+
+.managLink{
+    color: black;
+}

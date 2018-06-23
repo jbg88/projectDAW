@@ -1,9 +1,5 @@
 <?php
-//si ya se ha iniciado session redirige al home
-if (!empty($_SESSION['user'])) {
-    header('Location: index.php?p=home');
-    exit;
-}
+
 //si se han enviado datos, los compruebo, creando su correspondiente array de errores
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errors = [];
@@ -42,21 +38,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $age = $_POST['age'];
             $pass1 = password_hash($_POST['pass1'], PASSWORD_DEFAULT);
             $email = $_POST['email'];
-            $query = "INSERT INTO users (nick, age, password, email) VALUES (?, ?, ?, ?)";
+            $role = $_POST['adminSel'];
+            $query = "INSERT INTO users (nick, age, password, email, rol) VALUES (?, ?, ?, ?, ?)";
             $prepared = $db->prepare($query);
-            $prepared->bind_param('siss', $userName, $age, $pass1, $email);
+            $prepared->bind_param('sisss', $userName, $age, $pass1, $email, $role);
             $prepared->execute();
         }
     }
 }
 ?>
 
-<form action="index.php?p=register" method="post" name="formReg" onsubmit='return validate()' id="formReg">
+<form action="index.php?p=adminreg" method="post" name="formRegAdmin" onsubmit='return validate()' id="formRegAdmin">
     <!--    si hay errores los muestro-->
     <?= !empty($errors) ? "<p class='errorReg'>" . implode('<br>', $errors) . "</p>" : '' ?>
-    <h1 id="registerTitle">Register Form</h1>
+    <h1 id="adminRegisterTitle">Admin Register Form</h1>
 
-    <div class="divLog">
+    <div class="divLogA">
         <span class="spanLog"><label for="userName">User name or nick: </label></span>
         <span class="spanLog"><input type="text" id="userName" name="userName" required maxlength="18"
                                      minlength="1"/></span>
@@ -82,6 +79,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="divLog">
         <span class="spanLog"><label for="email">E-mail: </label></span>
         <span class="spanLog"><input type="email" id="email" name="email" required placeholder="test@test.com"></span>
+    </div>
+
+    <div class="divLog">
+        <span class="spanLog"><label for="adminSel">User rol: </label></span>
+        <span class="spanLog">
+            <select id="adminSel" name="adminSel" required>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+        </span>
     </div>
 
     <div class="divLog">

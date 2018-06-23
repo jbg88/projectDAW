@@ -30,6 +30,12 @@ header {
     color: white;
 }
 
+.headerWelcome{
+    background-color: blue;
+    padding: 0.5em;
+    color: white;
+}
+
 nav {
     font-family: Verdana, Geneva, sans-serif;
     -webkit-font-smoothing: antialiased;

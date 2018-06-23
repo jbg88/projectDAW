@@ -1,5 +1,5 @@
 /*primero en el movil (mobile first)*/
-#formLog {
+#formRegAdmin, #formModiAdmin, #formDisregAdmin {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-#logTitle{
+#adminRegisterTitle, #adminModifyTitle, #adminDisregTitle {
     text-decoration: underline;
     padding: 0.5em;
 }
@@ -32,17 +32,17 @@
     padding: 0.1em;
 }
 
-#nick:hover, #passLog:hover{
+#userName:hover, #age:hover, #pass1:hover, #pass2:hover, #email:hover {
     border: blueviolet 2px solid;
 }
 
-#nick:focus, #passLog:focus{
+#userName:focus, #age:focus, #pass1:focus, #pass2:focus, #email:focus {
     border: blueviolet 2px solid;
     background-color: lightgray;
     box-shadow: 1px 1px 8px blueviolet;
 }
 
-#logData{
+#submitData {
     border-radius: 0.4em;
     padding: 0.2em;
     background-color: blueviolet;
@@ -50,13 +50,13 @@
     color: white;
 }
 
-#logData:hover{
+#submitData:hover {
     background-color: deepskyblue;
     color: black;
     box-shadow: 1px 1px 10px blueviolet;
 }
 
-.errorLog{
+.errorReg {
     padding: 0.5em;
     background-color: blueviolet;
     color: white;
