@@ -2,10 +2,10 @@
 
 
     <div>
-        <h1 id="gameTitle">Dark Souls</h1>
+        <h1 id="gameTitle">Dark Souls Remastered</h1>
 
         <div class="gameImageDiv">
-            <img src="images/ds1.jpg" alt="dark souls 1"/>
+            <img src="images/ds1r.jpg" alt="dark souls remastered"/>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
     </div>
 
     <div id="gameComments">
-        <h3 id="commentsTitle"> Dark Souls 1 comments</h3>
+        <h3 id="commentsTitle"> Dark Souls Remastered comments</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, reprehenderit.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, reprehenderit.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, reprehenderit.</p>

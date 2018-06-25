@@ -1,5 +1,5 @@
 /*primero en el movil (mobile first)*/
-#ds1Page {
+#gamePage {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -11,13 +11,13 @@
     flex-wrap: wrap;
 }
 
-#ds1Title {
+#gameTitle {
     text-decoration: underline;
     padding: 0.5em;
     text-transform: capitalize;
 }
 
-.ds1ImgDiv {
+.gameImageDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,22 +25,22 @@
     padding: 0.5em;
 }
 
-#ds1Advices {
+#gameAdvices {
     background-color: blue;
     color: white;
     padding: 0.5em;
 }
 
-#ds1Advices p {
+#gameAdvices p {
     padding: 0.5em;
 }
 
-#ds1Advices h3 {
+#gameAdvices h3 {
     text-decoration: underline;
     padding: 0.5em;
 }
 
-#ds1References {
+#gameReferences {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -52,30 +52,32 @@
     padding: 1em;
     margin-top: 1em;
     margin-bottom: 1em;
+    margin-left: 1em;
 }
 
-#ds1References h3 {
+#gameReferences h3 {
     text-decoration: underline;
     padding: 0.5em;
 }
 
-#ds1References a {
+#gameReferences a {
     color: white;
     padding: 1em;
     text-decoration: none;
 }
 
-#ds1References a:hover{
+#gameReferences a:hover{
     color: black;
 }
 
-#ds1Comments {
+#gameComments {
     border: blueviolet 2px solid;
     padding: 1em;
     width: 100%;
+    margin-top: 1em;
 }
 
-#ds1Comments p {
+#gameComments p {
 
     padding: 0.5em;
 }
@@ -88,12 +90,12 @@
 
 /*formato para escritorio*/
 @media screen and (min-width: 720px) {
-    #ds1Page {
+    #gamePage {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    #ds1References {
+    #gameReferences {
         max-width: 20%;
     }
 }

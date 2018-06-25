@@ -22,8 +22,8 @@
     <h2 class="headerWelcome">
         <?php
         if (!empty($_SESSION['user'])) {
-            echo 'Bienvenido ' . htmlspecialchars($_SESSION['user']['nick']);//para evitar que metan cosas extrañas en la url
-            echo '. Eres un ' . ($_SESSION['user']['rol'] === 'user' ? 'usuario' : 'administrador') . '.';
+            echo 'Welcome ' . htmlspecialchars($_SESSION['user']['nick']);//para evitar que metan cosas extrañas en la url
+            echo '. You are an ' . ($_SESSION['user']['rol'] === 'user' ? 'user' : 'admin') . '.';
         }
         ?>
     </h2>

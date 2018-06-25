@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!--    si hay errores los muestro-->
     <?= !empty($errors) ? "<p class='errorReg'>" . implode('<br>', $errors) . "</p>" : '' ?>
     <?= !empty($done) ? "<p class='errorReg'>" . implode('<br>', $done) . "</p>" : '' ?>
-    <h1 id="adminDisregTitle">Admin Modify Form</h1>
+    <h1 id="adminDisregTitle">Admin Disregister Form</h1>
 
     <div class="divLogA">
         <span class="spanLog"><label for="userName">User name or nick: </label></span>

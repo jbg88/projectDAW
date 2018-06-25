@@ -32,11 +32,11 @@
     padding: 0.1em;
 }
 
-#userName:hover, #age:hover, #pass1:hover, #pass2:hover, #email:hover{
+#userName:hover, #age:hover, #pass1:hover, #pass2:hover, #email:hover, #adminSel:hover{
     border: blueviolet 2px solid;
 }
 
-#userName:focus, #age:focus, #pass1:focus, #pass2:focus, #email:focus{
+#userName:focus, #age:focus, #pass1:focus, #pass2:focus, #email:focus, #adminSel:focus{
     border: blueviolet 2px solid;
     background-color: lightgray;
     box-shadow: 1px 1px 8px blueviolet;
